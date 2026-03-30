@@ -41,17 +41,23 @@
 \renewcommand{\thesubsubsection}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}}
 \titleformat{\section}{\normalfont\Large\bfseries}{Article \thesection}{1em}{}
 \titleformat{\subsection}{\normalfont\large\bfseries}{Section \thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
 % Adding an \asubsubsection -- I feel dirty
 %\setcounter{secnumdepth}{5}
 \newcommand{\asubsubsection}[1]{\paragraph{#1} \label{#1}}
 \renewcommand{\theparagraph}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}}
+\titleformat{\paragraph}[block]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
 % Adding \a(sub){3,4}section during merge of bylaws and articles -- I feel _really_ dirty
 \setcounter{secnumdepth}{7}
 \setcounter{tocdepth}{7}
-\newcommand{\asubsubsubsection}[1]{\parindent=0em\subparagraph{#1} \label{#1}}
+\newcommand{\asubsubsubsection}[1]{\subparagraph{#1} \label{#1}}
 \renewcommand{\thesubparagraph}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}.\arabic{subparagraph}}
+\titleformat{\subparagraph}[block]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
 \newcounter{asubsubsubsubsection}[subparagraph]
 \renewcommand{\theasubsubsubsubsection}{\arabic{section}.\Alph{subsection}.\arabic{subsubsection}.\Alph{paragraph}.\arabic{subparagraph}.\Alph{asubsubsubsubsection}}
